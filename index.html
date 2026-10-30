@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sayed Abu Sayeed | Cybersecurity and IT Risk Research</title>
+<meta name="description" content="Sayed Abu Sayeed is a PhD student in Information Technology and Operations Management at Florida Atlantic University researching AI-driven cyber risk assessment, threat analysis and blockchain-backed security.">
+<meta name="author" content="Sayed Abu Sayeed">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Sayed Abu Sayeed | Cybersecurity and IT Risk Research">
+<meta property="og:description" content="Research on measuring and managing cyber risk with AI, machine learning and blockchain.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B6E5F'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3ESA%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sayed Abu Sayeed",
+  "email": "mailto:ssayeed.cse@gmail.com",
+  "jobTitle": "PhD Student and Course Instructor",
+  "affiliation": { "@type": "CollegeOrUniversity", "name": "Florida Atlantic University" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Emporia State University" },
+    { "@type": "CollegeOrUniversity", "name": "University of Dhaka" },
+    { "@type": "CollegeOrUniversity", "name": "Shahjalal University of Science and Technology" }
+  ],
+  "knowsAbout": ["Cybersecurity", "IT risk assessment", "Machine learning", "Blockchain", "Digital twins", "Data quality"]
+}
+</script>
+
+<style>
+@font-face {
+  font-family: "Archivo";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  src: url(fonts/archivo-latin-wdth-normal.woff2) format("woff2-variations"), url(fonts/archivo-latin-wdth-normal.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Source Serif";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url(fonts/source-serif-4-latin-opsz-normal.woff2) format("woff2-variations"), url(fonts/source-serif-4-latin-opsz-normal.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Source Serif";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url(fonts/source-serif-4-latin-opsz-italic.woff2) format("woff2-variations"), url(fonts/source-serif-4-latin-opsz-italic.woff2) format("woff2");
+}
+
+:root {
+  --paper: #FFFFFF;
+  --ink: #1A2229;
+  --muted: #56636D;
+  --rule: #D9DFE3;
+  --accent: #0B6E5F;
+  --accent-ink: #08473E;
+  --band: #EEF4F2;
+  --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Source Serif", Georgia, "Times New Roman", serif;
+  --measure: 40rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #151B1E;
+    --ink: #E6ECEE;
+    --muted: #A2AEB5;
+    --rule: #2D363B;
+    --accent: #5FC7B2;
+    --accent-ink: #8FDCCB;
+    --band: #1B2528;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+}
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { color: var(--accent-ink); text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { font-family: var(--sans); font-weight: 650; line-height: 1.15; margin: 0; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+.skip {
+  position: absolute; left: 1rem; top: -3rem;
+  background: var(--ink); color: var(--paper);
+  padding: .5rem .9rem; font-family: var(--sans); z-index: 10;
+}
+.skip:focus { top: .75rem; }
+
+.wrap {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 3rem);
+}
+
+/* Top bar */
+.topbar {
+  position: sticky; top: 0; z-index: 5;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--sans);
+}
+.topbar .wrap {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  justify-content: space-between; gap: .4rem 2rem;
+  padding-block: .85rem;
+}
+.topbar-name {
+  font-weight: 650; font-size: 1rem; color: var(--ink); text-decoration: none;
+}
+.topbar nav ul { display: flex; flex-wrap: wrap; gap: .25rem 1.4rem; }
+.topbar nav a {
+  color: var(--muted); text-decoration: none; font-size: .9375rem;
+}
+.topbar nav a:hover { color: var(--accent); }
+
+/* Hero */
+.hero { padding-block: clamp(3.5rem, 9vw, 7rem) clamp(2.5rem, 5vw, 3.5rem); }
+.hero h1 {
+  font-size: clamp(2.75rem, 7.5vw, 5.5rem);
+  font-weight: 700;
+  font-stretch: 88%;
+  letter-spacing: -0.015em;
+  line-height: .98;
+}
+.lede {
+  margin-top: 1.6rem;
+  max-width: 36rem;
+  font-size: clamp(1.25rem, 2.1vw, 1.5rem);
+  line-height: 1.45;
+}
+.role {
+  margin-top: 1.5rem;
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.links {
+  margin-top: 1.75rem;
+  display: flex; flex-wrap: wrap; gap: .6rem 1.75rem;
+  font-family: var(--sans); font-size: 1rem; font-weight: 550;
+}
+
+/* Frameworks band: the signature element */
+.frameworks {
+  background: var(--band);
+  padding-block: clamp(2.5rem, 5vw, 3.75rem);
+}
+.frameworks h2 {
+  font-size: 1.125rem; font-weight: 600; color: var(--muted);
+  margin-bottom: 1.75rem;
+}
+.fw-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  gap: 2.25rem 2rem;
+}
+@media (min-width: 66rem) {
+  .fw-list { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 2rem 1.75rem; }
+}
+.fw-list a {
+  display: block; height: 100%;
+  padding-top: .9rem;
+  border-top: 2px solid var(--ink);
+  color: inherit; text-decoration: none;
+}
+.fw-list a:hover { border-top-color: var(--accent); }
+.fw-list a:hover .fw-name { color: var(--accent); }
+.fw-name {
+  display: block;
+  font-family: var(--sans);
+  font-size: clamp(2rem, 3.3vw, 2.6rem);
+  font-weight: 640;
+  font-stretch: 70%;
+  letter-spacing: -0.005em;
+  line-height: 1;
+  color: var(--accent-ink);
+}
+.fw-desc { display: block; margin-top: .7rem; font-size: 1rem; line-height: 1.4; }
+.fw-venue {
+  display: block; margin-top: .55rem;
+  font-family: var(--sans); font-size: .875rem; color: var(--muted);
+}
+
+/* Sections */
+.section { padding-top: clamp(3.5rem, 7vw, 5rem); scroll-margin-top: 3.5rem; }
+.section .wrap > h2 {
+  font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+  font-stretch: 92%;
+  margin-bottom: 1.75rem;
+}
+.section .wrap > h3 {
+  font-size: 1.25rem; font-weight: 600;
+  margin: 2.75rem 0 .25rem;
+}
+.section-note { max-width: var(--measure); color: var(--muted); margin: -0.5rem 0 0; }
+
+/* Two-column rows: label or date on the left, content on the right */
+.row {
+  display: grid;
+  grid-template-columns: 14rem minmax(0, 1fr);
+  gap: .35rem 2.5rem;
+  padding-block: 1.35rem;
+  border-top: 1px solid var(--rule);
+  scroll-margin-top: 4rem;
+}
+.row > :last-child { max-width: var(--measure); }
+.row-label {
+  font-family: var(--sans); font-size: 1rem; font-weight: 600;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  padding-top: .15rem;
+}
+.row--thread h3 { font-size: 1.1875rem; font-weight: 620; line-height: 1.25; }
+.row p + p { margin-top: .6rem; }
+.related { font-family: var(--sans); font-size: .9375rem; color: var(--muted); }
+.related a { font-weight: 550; }
+
+.entry-title { font-family: var(--sans); font-size: 1.125rem; font-weight: 620; line-height: 1.3; }
+.row .entry-org { margin-top: .15rem; color: var(--muted); }
+.entry ul { margin-top: .55rem; }
+.entry li { position: relative; padding-left: 1.1rem; }
+.entry li + li { margin-top: .3rem; }
+.entry li::before {
+  content: ""; position: absolute; left: 0; top: .72em;
+  width: .45rem; height: 1px; background: var(--muted);
+}
+
+/* Publications */
+.cite { font-size: 1.0625rem; line-height: 1.55; }
+.cite b { font-weight: 700; }
+.cite .title { font-weight: 600; }
+.cite-meta {
+  margin-top: .45rem;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem 1rem;
+  font-family: var(--sans); font-size: .9375rem;
+}
+.tag {
+  font-family: var(--sans); font-size: .8125rem; color: var(--muted);
+  border: 1px solid var(--rule); border-radius: 3px; padding: .05rem .45rem;
+}
+
+/* Forward-looking statement */
+.ahead {
+  margin-top: 2.75rem;
+  max-width: 46rem;
+  border-left: 3px solid var(--accent);
+  padding: .25rem 0 .25rem 1.4rem;
+}
+.ahead h3 { font-size: 1.25rem; font-weight: 620; margin-bottom: .6rem; }
+
+/* Simple lists */
+.plain li { padding-block: 1rem; border-top: 1px solid var(--rule); max-width: 50rem; }
+.row--thread h3 { padding-right: 1rem; }
+
+.contact p { max-width: var(--measure); }
+.contact .big {
+  display: inline-block; margin-top: .75rem;
+  font-family: var(--sans); font-size: clamp(1.35rem, 3vw, 1.9rem); font-weight: 600; font-stretch: 90%;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  margin-top: clamp(4rem, 8vw, 6rem);
+  border-top: 1px solid var(--rule);
+  padding-block: 1.75rem 2.5rem;
+  font-family: var(--sans); font-size: .875rem; color: var(--muted);
+}
+
+@media (max-width: 40rem) {
+  .row, .row--thread { grid-template-columns: 1fr; }
+  .topbar { position: static; }
+  .section { scroll-margin-top: 0; }
+  .row { scroll-margin-top: 0; }
+}
+@media print {
+  .topbar, .skip { display: none; }
+  .frameworks { background: none; }
+  a { color: inherit; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="topbar-name" href="#top">Sayed Abu Sayeed</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#recognition">Recognition</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <h1>Sayed Abu Sayeed</h1>
+      <p class="lede">I research how organizations can measure and manage cyber risk using AI, machine learning and blockchain. My work draws on more than seven years in IT and network operations at a bank, a national ministry and an electric utility.</p>
+      <p class="role">PhD student, Information Technology &amp; Operations Management<br>Course Instructor, Florida Atlantic University, Boca Raton, Florida</p>
+      <ul class="links">
+        <li><a href="mailto:ssayeed.cse@gmail.com">ssayeed.cse@gmail.com</a></li>
+        <!-- TODO: replace this search link with your Google Scholar profile URL -->
+        <li><a href="https://scholar.google.com/citations?view_op=search_authors&amp;mauthors=Sayed+Abu+Sayeed">Google Scholar</a></li>
+        <!-- TODO: add your LinkedIn URL and remove the comment markers
+        <li><a href="https://www.linkedin.com/in/YOUR-PROFILE">LinkedIn</a></li>
+        -->
+      </ul>
+    </div>
+  </section>
+
+  <section class="frameworks" aria-labelledby="fw-heading">
+    <div class="wrap">
+      <h2 id="fw-heading">Frameworks from my published work</h2>
+      <ul class="fw-list">
+        <li><a href="#p-riskaichain">
+          <span class="fw-name">riskAIchain</span>
+          <span class="fw-desc">AI-driven IT infrastructure with a blockchain-backed approach to risk management</span>
+          <span class="fw-venue">Risks, 2024</span>
+        </a></li>
+        <li><a href="#p-assessits">
+          <span class="fw-name">AssessITS</span>
+          <span class="fw-desc">Procedures and practical metrics for organizational IT and cybersecurity risk assessment</span>
+          <span class="fw-venue">Journal of Information Security, 2024</span>
+        </a></li>
+        <li><a href="#p-isndchain">
+          <span class="fw-name">ISNDchain</span>
+          <span class="fw-desc">Blockchain-based secure information systems for national defense</span>
+          <span class="fw-venue">CRC Press book chapter, 2025</span>
+        </a></li>
+        <li><a href="#p-cryptoran">
+          <span class="fw-name">cryptoRAN</span>
+          <span class="fw-desc">Cryptojacking and ransomware threats to the banking industry</span>
+          <span class="fw-venue">IEEE InCACCT, 2024</span>
+        </a></li>
+        <li><a href="#p-datalda">
+          <span class="fw-name">dataLDA</span>
+          <span class="fw-desc">Data quality in big data: traditional methods compared with topic modeling</span>
+          <span class="fw-venue">IEEE ISDFS, 2025</span>
+        </a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="research" aria-labelledby="research-h">
+    <div class="wrap">
+      <h2 id="research-h">Research</h2>
+
+      <article class="row row--thread">
+        <h3>Measuring and managing cyber risk</h3>
+        <div>
+          <p>Organizations need risk assessments they can repeat, compare and act on. AssessITS sets out step-by-step procedures and practical evaluation metrics for IT and cybersecurity risk assessment. riskAIchain pairs AI-driven IT infrastructure with a blockchain-backed approach to make risk management more reliable.</p>
+          <p class="related">Related: <a href="#p-assessits">AssessITS</a>, <a href="#p-riskaichain">riskAIchain</a></p>
+        </div>
+      </article>
+
+      <article class="row row--thread">
+        <h3>Threats to finance and national security</h3>
+        <div>
+          <p>cryptoRAN reviews cryptojacking and ransomware attacks on the banking industry: the threats, the challenges and the open problems. ISC2 asked for permission to include its findings in a cybersecurity white paper. ISNDchain looks at how blockchain can secure the information systems used in national defense.</p>
+          <p class="related">Related: <a href="#p-cryptoran">cryptoRAN</a>, <a href="#p-isndchain">ISNDchain</a></p>
+        </div>
+      </article>
+
+      <article class="row row--thread">
+        <h3>Data quality for trustworthy analytics</h3>
+        <div>
+          <p>Security and business analytics are only as good as the data behind them. dataLDA is a systematic review that compares traditional ways of analyzing data quality in big data with latent Dirichlet allocation, a topic-modeling method.</p>
+          <p class="related">Related: <a href="#p-datalda">dataLDA</a></p>
+        </div>
+      </article>
+
+      <article class="row row--thread">
+        <h3>AI-enabled digital twins for ports</h3>
+        <div>
+          <p>A digital twin is a live virtual model of a physical operation. This work studies how AI-enabled digital twins can support sustainable, carbon-neutral smart port operations, starting from a comprehensive review of digital twins for smart seaports.</p>
+          <p class="related">Related: <a href="#p-wmu">WMU Journal of Maritime Affairs, 2026</a>, <a href="#p-dsi">DSI 2025</a></p>
+        </div>
+      </article>
+
+      <article class="row row--thread">
+        <h3>IT leadership and digital performance</h3>
+        <div>
+          <p>My sole-authored HICSS 2026 paper examines how the presence of a chief information officer (CIO) relates to employees’ digital performance inside organizations.</p>
+          <p class="related">Related: <a href="#p-hicss">HICSS 2026</a></p>
+        </div>
+      </article>
+
+      <!-- DRAFT: this paragraph was written from the publication list. Rewrite it in your own words so it matches your actual research plan. -->
+      <div class="ahead">
+        <h3>Where this work is going</h3>
+        <p>I am extending this risk-assessment work toward AI-supported threat detection: models that help security teams spot emerging attacks earlier, reduce false alarms and decide which incidents to handle first, in sectors such as banking, healthcare, cloud services and critical infrastructure.</p>
+      </div>
+
+      <p class="related" style="margin-top:2.25rem;max-width:var(--measure)">Interests: cybersecurity and privacy, data analytics and data mining, machine learning and neural networks, simulation, IT and business alignment, IT-enabled business agility, database management, network security and performance, optimization.</p>
+    </div>
+  </section>
+
+  <section class="section" id="publications" aria-labelledby="pubs-h">
+    <div class="wrap">
+      <h2 id="pubs-h">Publications</h2>
+      <p class="section-note">My name is in bold. For citation counts and the latest list, see <a href="https://scholar.google.com/citations?view_op=search_authors&amp;mauthors=Sayed+Abu+Sayeed">Google Scholar</a>.</p>
+
+      <h3>Journal articles and book chapters</h3>
+      <ol>
+        <li class="row" id="p-wmu">
+          <span class="row-label">2026</span>
+          <div>
+            <p class="cite">Menachof, D. A., &amp; <b>Sayeed, S. A.</b> <span class="title">Artificial intelligence-enabled digital twins for sustainable and carbon-neutral smart port operations.</span> <i>WMU Journal of Maritime Affairs</i>, 25, 463–479.</p>
+            <p class="cite-meta"><a href="https://doi.org/10.1007/s13437-026-00428-6">doi.org/10.1007/s13437-026-00428-6</a></p>
+            <!-- Optional: describe your contribution, e.g. <p class="related">My role: ...</p> -->
+          </div>
+        </li>
+        <li class="row" id="p-isndchain">
+          <span class="row-label">2025</span>
+          <div>
+            <p class="cite">Rahman, M. M., <b>Sayeed, S. A.</b>, &amp; Kshetri, N. <span class="title">ISNDchain: Blockchain technology-based secure information systems and national defense.</span> In <i>Blockchain technology for cyber defense, cybersecurity, and countermeasures: Techniques, solutions, and applications</i> (Chapter 15). CRC Press.</p>
+            <p class="cite-meta"><a href="https://doi.org/10.1201/9781003449515-15">doi.org/10.1201/9781003449515-15</a></p>
+          </div>
+        </li>
+        <li class="row" id="p-riskaichain">
+          <span class="row-label">2024</span>
+          <div>
+            <p class="cite">Rahman, M. M., Pokharel, B. P., <b>Sayeed, S. A.</b>, Bhowmik, S. K., Kshetri, N., &amp; Eashrak, N. <span class="title">riskAIchain: AI-driven IT infrastructure—Blockchain-backed approach for enhanced risk management.</span> <i>Risks</i>, 12(12), 206.</p>
+            <p class="cite-meta"><a href="https://doi.org/10.3390/risks12120206">doi.org/10.3390/risks12120206</a></p>
+          </div>
+        </li>
+        <li class="row" id="p-assessits">
+          <span class="row-label">2024</span>
+          <div>
+            <p class="cite">Rahman, M. M., Kshetri, N., <b>Sayeed, S. A.</b>, &amp; Rana, M. M. <span class="title">AssessITS: Integrating procedural guidelines and practical evaluation metrics for organizational IT and cybersecurity risk assessment.</span> <i>Journal of Information Security</i>, 15(4), 564–588.</p>
+            <p class="cite-meta"><a href="https://doi.org/10.4236/jis.2024.154032">doi.org/10.4236/jis.2024.154032</a></p>
+          </div>
+        </li>
+      </ol>
+
+      <h3>Conference papers</h3>
+      <ol>
+        <li class="row" id="p-hicss">
+          <span class="row-label">2026</span>
+          <div>
+            <p class="cite"><b>Sayeed, S. A.</b> <span class="title">Leadership that clicks: The impact of CIO presence on employees’ digital performance in organizations.</span> <i>Hawaii International Conference on System Sciences (HICSS)</i>.</p>
+            <p class="cite-meta"><span class="tag">Sole author</span></p>
+          </div>
+        </li>
+        <li class="row" id="p-datalda">
+          <span class="row-label">2025</span>
+          <div>
+            <p class="cite"><b>Sayeed, S. A.</b>, Kshetri, N., Rahman, M. M., Alam, S., &amp; Rahman, A. <span class="title">dataLDA: Analyzing data quality in big data using traditional approaches vs. latent Dirichlet allocation—Systematic review.</span> <i>13th International Symposium on Digital Forensics and Security (ISDFS)</i>, Boston, MA, pp. 1–6.</p>
+            <p class="cite-meta"><a href="https://doi.org/10.1109/ISDFS65363.2025.11012074">doi.org/10.1109/ISDFS65363.2025.11012074</a><span class="tag">First author</span></p>
+          </div>
+        </li>
+        <li class="row" id="p-dsi">
+          <span class="row-label">2025</span>
+          <div>
+            <p class="cite"><b>Sayeed, S. A.</b>, &amp; Menachof, D. A. <span class="title">Digital twin for smart seaport operations: A comprehensive review.</span> <i>56th Annual Conference of the Decision Sciences Institute (DSI)</i>.</p>
+            <p class="cite-meta"><span class="tag">First author</span></p>
+          </div>
+        </li>
+        <li class="row" id="p-cryptoran">
+          <span class="row-label">2024</span>
+          <div>
+            <p class="cite">Kshetri, N., Rahman, M. M., <b>Sayeed, S. A.</b>, &amp; Sultana, I. <span class="title">cryptoRAN: A review on cryptojacking and ransomware attacks w.r.t. banking industry—Threats, challenges, &amp; problems.</span> <i>Proceedings of the 2nd International Conference on Advancement in Computation &amp; Computer Technologies (InCACCT)</i>. IEEE Xplore.</p>
+            <p class="cite-meta"><a href="https://doi.org/10.1109/InCACCT61598.2024.10550970">doi.org/10.1109/InCACCT61598.2024.10550970</a></p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="recognition" aria-labelledby="rec-h">
+    <div class="wrap">
+      <h2 id="rec-h">Recognition and service</h2>
+      <ul class="plain">
+        <li>ISC2 asked for permission to include findings from <a href="#p-cryptoran">cryptoRAN</a> in an upcoming cybersecurity white paper. Permission was granted.</li>
+        <li>Peer reviewer for the Decision Sciences Institute (DSI) and the Hawaii International Conference on System Sciences (HICSS).</li>
+        <li>Graduate Assistantship with full tuition waiver, Florida Atlantic University.</li>
+        <li>Member, Phi Kappa Phi and Beta Gamma Sigma honor societies, Emporia State University chapters, 2023.</li>
+        <li>New Graduate Student Scholarship, Emporia State University, 2021.</li>
+        <li>Graduate Assistantship with full tuition waiver, Emporia State University.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="teaching" aria-labelledby="teach-h">
+    <div class="wrap">
+      <h2 id="teach-h">Teaching</h2>
+      <div class="row entry">
+        <span class="row-label">2026–present</span>
+        <div>
+          <p class="entry-title">Course Instructor</p>
+          <p class="entry-org">Florida Atlantic University, Boca Raton, Florida</p>
+          <ul>
+            <li>Teach undergraduates information systems, cybersecurity, artificial intelligence, computer networks and databases.</li>
+            <li>Lead lectures and hands-on Excel exercises on data analysis for business.</li>
+            <li>Assess students through quizzes, exams and practical assignments.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row entry">
+        <span class="row-label">2022–2024</span>
+        <div>
+          <p class="entry-title">Graduate Teaching Assistant</p>
+          <p class="entry-org">Emporia State University, Emporia, Kansas</p>
+          <ul>
+            <li>Quantitative Analysis of Business Decisions (BU 820), Spring and Fall 2022</li>
+            <li>Information Technology Project Management (IS 813), Summer 2022 and Summer 2023</li>
+            <li>Systems Analysis and Design (IS 823), Spring 2023</li>
+            <li>Programming and Problem Solving II with Lab (CS 360), Fall 2023</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experience" aria-labelledby="exp-h">
+    <div class="wrap">
+      <h2 id="exp-h">Industry experience</h2>
+      <div class="row entry">
+        <span class="row-label">2023</span>
+        <div>
+          <p class="entry-title">Network Engineer Intern</p>
+          <p class="entry-org">Evergy, electric utility, Topeka, Kansas</p>
+          <ul>
+            <li>Integrated and configured network equipment using SNMP monitoring (SolarWinds).</li>
+            <li>Implemented and maintained security protocols with Cisco Identity Services Engine for user authentication and access control.</li>
+            <li>Worked with Cisco ACI and DNA in data center environments.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row entry">
+        <span class="row-label">2017–2022</span>
+        <div>
+          <p class="entry-title">Assistant Programmer</p>
+          <p class="entry-org">Ministry of Education, Dhaka, Bangladesh</p>
+          <ul>
+            <li>Worked with quality engineers on complex projects across several functional areas.</li>
+            <li>Ran code reviews, found bugs and gave feedback to team members.</li>
+            <li>Troubleshot connectivity and optimized traffic on TCP/IP routed networks.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row entry">
+        <span class="row-label">2015–2017</span>
+        <div>
+          <p class="entry-title">Officer (IT)</p>
+          <p class="entry-org">Export Import Bank of Bangladesh, Dhaka</p>
+          <ul>
+            <li>Operated and maintained the core banking system and data center.</li>
+            <li>Supported banking software, Active Directory and hardware; troubleshot and debugged technical issues.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education" aria-labelledby="edu-h">
+    <div class="wrap">
+      <h2 id="edu-h">Education</h2>
+      <div class="row">
+        <span class="row-label">2024–present</span>
+        <div><p class="entry-title">PhD, Information Technology &amp; Operations Management</p><p class="entry-org">Florida Atlantic University, Boca Raton, Florida</p></div>
+      </div>
+      <div class="row">
+        <span class="row-label">2022–2024</span>
+        <div><p class="entry-title">MS, Information Technology</p><p class="entry-org">Emporia State University, Emporia, Kansas. GPA 4.0</p></div>
+      </div>
+      <div class="row">
+        <span class="row-label">2013–2016</span>
+        <div><p class="entry-title">MBA, Management Information Systems</p><p class="entry-org">University of Dhaka, Bangladesh</p></div>
+      </div>
+      <div class="row">
+        <span class="row-label">2008–2012</span>
+        <div><p class="entry-title">BSc, Computer Science and Engineering</p><p class="entry-org">Shahjalal University of Science and Technology, Sylhet, Bangladesh</p></div>
+      </div>
+
+      <h3 style="margin-top:3rem">Certifications and training</h3>
+      <ul class="plain" style="margin-top:1rem">
+        <li>Microsoft Certified: Azure Administrator Associate</li>
+        <li>AWS Academy Graduate, AWS Academy Cloud Foundations</li>
+        <li>Certified Information Systems Auditor (CISA) academic course, IBCS-PRIMAX Software (Bangladesh)</li>
+        <li>Database Management and Administration, Bangladesh University of Engineering and Technology</li>
+        <li>CCNA academic course, Shahjalal University of Science and Technology</li>
+        <li>Java, Ernst &amp; Young LLP, India</li>
+      </ul>
+    </div>
+  </section>
+
+  <!--
+  OPTIONAL: if you publish code, datasets or prototypes on GitHub, add a section like this
+  and a "Code" link in the top navigation.
+
+  <section class="section" id="code" aria-labelledby="code-h">
+    <div class="wrap">
+      <h2 id="code-h">Code and data</h2>
+      <div class="row">
+        <span class="row-label">2026</span>
+        <div>
+          <p class="entry-title"><a href="https://github.com/YOUR-USERNAME/REPO">Repository name</a></p>
+          <p>One sentence on what it does and which paper it supports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <section class="section contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <h2 id="contact-h">Contact</h2>
+      <p>I welcome questions about my research, collaboration on cyber-risk and AI security projects, and invitations to speak or review.</p>
+      <a class="big" href="mailto:ssayeed.cse@gmail.com">ssayeed.cse@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Sayed Abu Sayeed. Last updated October 2026.</p>
+  </div>
+</footer>
+</body>
+</html>
